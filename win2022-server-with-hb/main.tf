@@ -19,6 +19,7 @@ data "azurerm_subnet" "subnet" {
   resource_group_name  = data.azurerm_resource_group.vnet-rg.name
 }
 
+#Use bootdiag storage account
 data "azurerm_storage_account" "vm_bootdiag" {
   name                 = var.vm_bootdiag
   resource_group_name  = var.bootdiag_rg_name
